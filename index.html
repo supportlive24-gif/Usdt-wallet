@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndiaUSDT Wallet</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+h1 { margin-bottom: 5px; }
+
+.tagline {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.rate {
+    background: black;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+input, select {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 95%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.info {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.warning {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>IndiaUSDT Wallet</h1>
+<p class="tagline">🔒 Trusted USDT Buy & Sell | Payment in 1 Hour</p>
+
+<div class="rate">
+Buy: ₹91.80 <br>
+Sell: ₹93.64
+</div>
+
+<p class="info">⏱️ Payment done in under 1 hour</p>
+<p class="info">📧 Support: supportlive24@gmail.com</p>
+
+<h3>Place Order</h3>
+
+<input type="text" id="name" placeholder="Your Name">
+
+<input type="tel" id="mobile" placeholder="Mobile Number">
+
+<input type="email" id="email" placeholder="Email (optional)">
+
+<input type="number" id="amount" placeholder="Amount ₹">
+
+<select id="type">
+<option value="Buy">Buy USDT</option>
+<option value="Sell">Sell USDT</option>
+</select>
+
+<button onclick="sendOrder()">Submit Order</button>
+
+<p class="warning">
+⚠️ Always verify before payment. No responsibility for wrong transfer.
+</p>
+
+</div>
+
+<script>
+
+function sendOrder() {
+    let name = document.getElementById("name").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let amount = document.getElementById("amount").value.trim();
+    let type = document.getElementById("type").value;
+
+    if(name === "" || mobile === "" || amount === "") {
+        alert("Please fill Name, Mobile and Amount");
+        return;
+    }
+
+    let message = `INDIAUSDT WALLET ORDER%0AName: ${name}%0AMobile: ${mobile}%0AEmail: ${email}%0AType: ${type}%0AAmount: ₹${amount}`;
+
+    window.location.href = "https://wa.me/919471407206?text=" + message;
+}
+
+</script>
+
+</body>
+</html>
